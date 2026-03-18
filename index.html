@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+
+    <!--   Font Awesome cdn   -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--   Custom CSS   -->
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body class=" bg2">
+    <!--   HEADER Start   -->
+       <header class=" p-2">
+        <h1 class=" text-2xl md:text-3xl font-bold border-b-3 border-b-gray-800 text-center p-1">
+            Student Registration System
+        </h1>
+       </header>
+    <!--   HEADER End   -->
+
+    <!--   CONTAINER BOX Start   -->
+       <main class="containerBox p-2  w-full flex flex-col justify-evenly items-center gap-2.5 lg:gap-0.5 lg:flex-row ">
+
+        <!--   Form Section   -->
+        <section class="formSection bg1 w-full lg:w-[40vw] h-[91vh] lg:h-[88vh] flex items-center justify-center rounded-2xl">
+            <form id="regForm" class=" p-2 h-full flex flex-col justify-evenly items-center">
+
+                <h3 class=" text-xl font-semibold border-b-2 p-1">
+                    Registration Form
+                </h3>
+
+                <div class="inputSections">   <!-- Name -->
+                    <label for="studentName">
+                        <i class="fa-solid fa-user"></i>
+                        Student Name
+                    </label>
+                    <input type="text" name="studentName" id="studentName">
+                </div>
+
+                <div class="inputSections">   <!-- ID -->
+                    <label for="studentID">
+                        <i class="fa-solid fa-id-badge"></i>
+                        Student ID
+                    </label>
+                    <input type="number" name="studentID" id="studentID">
+                </div>
+
+                <div class="inputSections">   <!-- Email -->
+                    <label for="studentEmail">
+                        <i class="fa-solid fa-envelope"></i>
+                        Email ID
+                    </label>
+                    <input type="email" name="studentEmail" id="studentEmail">
+                </div>
+
+                <div class="inputSections">   <!-- Contact -->
+                    <label for="contactNumber">
+                        <i class="fa-solid fa-phone"></i>
+                        Contact Number
+                    </label>
+                    <input type="tel" name="contactNumber" id="contactNumber">
+                </div>
+
+                <div id="errorDiv">
+                    <p id="errorText"></p>
+                </div>
+
+                <button type="submit" id="regBtn" class=" p-2 w-30 rounded-lg hover:animate-bounce">
+                    Register
+                </button>
+
+                <p class="note lg:hidden animate-pulse text-sm text-amber-300">
+                    Scroll down to see Registered Students' List
+                </p>
+
+            </form>
+        </section>
+
+        <!--   Separation Div   -->
+        <!-- <div class="sep w-full rounded-[100%] h-1 lg:h-[80vh] lg:w-1 bg-amber-950"></div> -->
+
+        <!--   Display Section   -->
+        <section class="displaySection w-full lg:w-[56vw] h-[88vh] flex flex-col items-center justify-center rounded-2xl bg1">
+            
+            <h3 class=" text-xl font-semibold border-b-2 p-1">
+                Registered Students Record
+            </h3>
+
+            <div class="listDiv w-[98%] h-[88%] p-3">
+                
+                <!--   Data Table Start   -->
+                <table id="studentsTable" class=" w-full h-full flex flex-col">
+
+                    <thead>
+                        <tr class=" text-sm bg-gray-700 text-gray-200 text-center">
+                            <th id="sName" class=" border-r-2">Name</th>
+                            <th id="sID" class=" border-r-2">Student ID</th>
+                            <th id="sEmail" class=" border-r-2">Email ID</th>
+                            <th id="sContNum" class=" border-r-2">Contact</th>
+                            <th id="actBtns">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentsData" class=""></tbody>
+
+                </table>
+                <!--   Data Table End   -->
+
+            </div>
+
+        </section>
+       </main>
+    <!--   CONTAINER BOX End   -->
+
+    <script src="script.js"></script>
+</body>
+</html>
