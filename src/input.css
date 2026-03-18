@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+/* --- BACKGROUNDS --- */
+.bg1 {
+    background: linear-gradient(180deg, #f9f0d6, #0c2043bc);
+}
+
+.bg2 {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #daf2f9e1, #f6f8cd, #daf2f9e1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*---------- x ----------*/
+
+/* --- COMMON FOR SIMILAR ELEMENT --- */
+button:active {
+    scale: 0.92;
+}
+/*---------- x ----------*/
+
+h1 {
+    background: linear-gradient(180deg, var(--color-gray-400), var(--color-gray-800));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.inputSections {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #222;
+    font-weight: 600;
+}
+
+.inputSections input {
+    padding: 8px;
+    background: #e4e4e4;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    box-shadow: -1px 1px 4px #666;
+}
+
+#regBtn {
+    background: linear-gradient(180deg, var(--color-amber-300), var(--color-amber-500));
+    box-shadow: 0px 0px 4px #333;
+}
+
+.errorBounce {
+    animation: var(--animate-bounce);
+    border: 2px solid #ff0000;
+}
+
+input:focus {
+    animation: none;
+}
+
+/*   TABLE   */
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+tr {
+    width: 100%;
+    display: flex;
+}
+
+th {
+    padding: 8px;
+    word-wrap: break-word;
+}
+
+td {
+    padding: 8px;
+    word-wrap: break-word;
+    border: 1px solid #333;
+}
+
+th:nth-child(1), td:nth-child(1) {
+    width: 25%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 15%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 25%;
+}
+
+th:nth-child(4), td:nth-child(4) {
+    width: 20%;
+}
+
+th:nth-child(5), td:nth-child(5) {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.actBtn:hover {
+    scale: 1.25;
+    transition: all 0.4s ease;
+}
+
+/*---   MEDIA QUERIES   ---*/
+/* lg:1024px & above */
+@media (min-width: 1024px) {
+    .bg1 {
+    background: linear-gradient(180deg, #fffdedb1, #0c204328);
+}
+
+    .inputSections {
+        width: 35vw;
+        padding: 0px 32px;
+    }
+}
+
+/* sm:640px & above */
+@media (min-width: 640px) {
+    th:nth-child(5), td:nth-child(5) {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+}
